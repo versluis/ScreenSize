@@ -21,6 +21,7 @@
 		D257F9B1182A3CF800C78975 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D257F993182A3CF800C78975 /* UIKit.framework */; };
 		D257F9B9182A3CF800C78975 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D257F9B7182A3CF800C78975 /* InfoPlist.strings */; };
 		D257F9BB182A3CF800C78975 /* ScreenSizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D257F9BA182A3CF800C78975 /* ScreenSizeTests.m */; };
+		D257F9C6182A44F400C78975 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D257F9C5182A44F400C78975 /* iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D257F9B6182A3CF800C78975 /* ScreenSizeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScreenSizeTests-Info.plist"; sourceTree = "<group>"; };
 		D257F9B8182A3CF800C78975 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D257F9BA182A3CF800C78975 /* ScreenSizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenSizeTests.m; sourceTree = "<group>"; };
+		D257F9C5182A44F400C78975 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		D257F995182A3CF800C78975 /* ScreenSize */ = {
 			isa = PBXGroup;
 			children = (
+				D257F9C4182A44A000C78975 /* iPad */,
 				D257F99E182A3CF800C78975 /* AppDelegate.h */,
 				D257F99F182A3CF800C78975 /* AppDelegate.m */,
 				D257F9A1182A3CF800C78975 /* Main.storyboard */,
@@ -150,6 +153,14 @@
 				D257F9B7182A3CF800C78975 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D257F9C4182A44A000C78975 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				D257F9C5182A44F400C78975 /* iPad.storyboard */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D257F9C6182A44F400C78975 /* iPad.storyboard in Resources */,
 				D257F9A8182A3CF800C78975 /* Images.xcassets in Resources */,
 				D257F99A182A3CF800C78975 /* InfoPlist.strings in Resources */,
 				D257F9A3182A3CF800C78975 /* Main.storyboard in Resources */,
@@ -376,12 +388,15 @@
 		D257F9BF182A3CF800C78975 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenSize/ScreenSize-Prefix.pch";
 				INFOPLIST_FILE = "ScreenSize/ScreenSize-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,12 +404,15 @@
 		D257F9C0182A3CF800C78975 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScreenSize/ScreenSize-Prefix.pch";
 				INFOPLIST_FILE = "ScreenSize/ScreenSize-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
