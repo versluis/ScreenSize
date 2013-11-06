@@ -12,7 +12,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // lets detect the height of our screen here too
+    // you could then load different storyboards depending on the screen size
+    
+    int height = [UIScreen mainScreen].bounds.size.height;
+    int width = [UIScreen mainScreen].bounds.size.width;
+    
+    // share the news
+    NSString *message = [[NSString alloc]initWithFormat:@"This screen is \n\n%i pixels high and\n%i pixels wide", height, width];
+    NSLog(@"%@", message);
+    
     return YES;
 }
 							
